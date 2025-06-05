@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 import java.time.LocalTime;
 import java.util.List;
 
-@Component //permette a spring di gestire interamente la classe
+// @Component //permette a spring di gestire interamente la classe
 @Order(1) //nel caso di più runner indico che questo è il primo 
  class Runner implements CommandLineRunner {
         @Override

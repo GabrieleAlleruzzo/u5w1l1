@@ -1,5 +1,7 @@
 package it_gabriele.u5w1l1.bean;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToMany;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
@@ -12,8 +14,11 @@ import java.util.List;
 @NoArgsConstructor
 @ToString(callSuper = true)
 //@Component
+@Entity
+
 public class Pizza extends Prodotto{
     //@Autowired
+    @ManyToMany(mappedBy = "pizze")
     private List<Topping> toppings;
 
    /* @Autowired(required = false)
